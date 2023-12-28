@@ -1,0 +1,36 @@
+---
+import StudiesItems from "../components/StudiesItems.astro";
+const STUDIES = [
+  {
+    date: "Actualmente...",
+    title: "Ingenieria en Sistemas de Información",
+    description:
+      "Estudio en la Universidad Tecnológica Nacional - Reginal La Plata desde 2022 y cursando actualmente",
+    link: "#",
+  },
+  {
+    date: "Agosto 2023",
+    title: "Diseñador Web",
+    description:
+      "Estudié en la Universidad Nacional de Avellaneda donde me certifiqué con conocimientos Fron-End",
+    link: "#",
+  },
+  {
+    date: "Junio 2023",
+    title: "Python developer",
+    description:
+      "Estudié en la Universidad Nacional de Misiones en donde aprendimos los conocimientos basicos de python con ejercicios desde basicos hasta expertos",
+    link: "#",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {
+    STUDIES.map((studies) => (
+      <li class="mb-10 ms-4">
+        <StudiesItems {...studies} />
+      </li>
+    ))
+  }
+</ol>
