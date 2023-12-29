@@ -1,0 +1,53 @@
+---
+import AstroIcon from "./icons/Astro.astro";
+import TailwindIcon from "./icons/Tailwind.astro";
+const TAGS = {
+  ASTRO: {
+    name: "Astro",
+    class: "bg-black text-white",
+    icon: AstroIcon,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: TailwindIcon,
+  },
+};
+const PROJECTS = [
+  {
+    title: "Comming Soon",
+    description:
+      "Estoy haciendo proyectos que todavia no los terminé, en cuanto esten listo los pondre en esta seccion",
+    link: "#",
+    github: "#",
+    image: "/projects/1.webp",
+    tags: [TAGS.ASTRO, TAGS.TAILWIND],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, tags, image }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 flex-row mb-2">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 border border-white/10`}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-white/10"
+        src={image}
+        alt={`captura de pantalla del proyecto ${image}`}
+      />
+    </article>
+  ))
+}

@@ -10,20 +10,24 @@ import MailIcon from "../components/icons/Mail.astro";
 import Studies from "../components/Studies.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import StudieIcon from "../components/icons/StudieIcon.astro";
+import ProjectIcon from "../components/icons/ProjectIcon.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout
-	title="Portfolio de Julio Enrique - Programador"
+	title="Porfolio de Julio Enrique - Programador"
 	description="Contrata a Julio para tener en el equipo a un programador con todas las ganas de aprender y esforzarse cada dia en mejorar"
 >
-	<main>
+	<main class="px-4">
 		<SectionContainer class="py-32 pb-16">
 			<img
 				class="rounded-full size-16 hover:scale-125"
-				src="https://avatars.githubusercontent.com/u/124218570?v=4"
+				src="https://media.licdn.com/dms/image/D4D03AQHMiapaRX53HQ/profile-displayphoto-shrink_200_200/0/1674163755553?e=2147483647&v=beta&t=mJOL_eRTr_N-Wr3P6QCuzkqs_3OPOZnAYve0MFjULww"
 				alt="mifoto"
 			/>
-			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
+			<h1
+				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-4"
+			>
 				Hola soy Julio <a
 					href="http://linkedin.com/in/julio-enrique-54234a223"
 					target="_blank"
@@ -33,34 +37,41 @@ import StudieIcon from "../components/icons/StudieIcon.astro";
 					<Badge>Disponible</Badge>
 				</a>
 			</h1>
-			<h2 class="text-2xl opacity-80 text-wrap">
+			<h2 class="text-xl lg:text-2xl opacity-80 text-wrap mas-w-[700px]">
 				<span class="text-yellow-200/90"
 					>Estudiante de Ingenieria En Sistemas De Información</span
 				>. Con ansias de empezar mi primera experiencia laboral. <span
 					class="text-blue-300/90">De La Plata, Argentina.</span
 				>
 			</h2>
-			<nav class="flex gap-x-2">
+			<nav class="flex gap-2 mt-8 flex-wrap">
 				<SocialPill href="http://linkedin.com/in/julio-enrique-54234a223">
-					<LinkedInIcon class="size-6" />
+					<LinkedInIcon class="size-4 md:size-6" />
 					 LinkedIn
 				</SocialPill>
 				<SocialPill href="https://github.com/julioenriqee">
-					<GitHubIcon class="size-6" />
+					<GitHubIcon class="size-4 md:size-6" />
 					 GitHub
 				</SocialPill>
-				<SocialPill href="enriquejulio071@gmail.com">
-					<MailIcon class="size-6" />
+				<SocialPill href="mailto:enriquejulio071@gmail.com">
+					<MailIcon class="size-4 md:size-6" />
 					 enriquejulio071
 				</SocialPill>
 			</nav>
 		</SectionContainer>
-		<SectionContainer id="Estudio">
-			<h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center">
-				<StudieIcon class="size-7" />
+		<SectionContainer id="Estudios">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-2 items-center">
+				<StudieIcon class="size-4 md:size-6" />
 				 Estudios
 			</h2>
 			<Studies />
+		</SectionContainer>
+		<SectionContainer id="Proyectos">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-2 items-center">
+				<ProjectIcon class="size-4 md:size-6" />
+				 Proyectos
+			</h2>
+			<Projects />
 		</SectionContainer>
 	</main>
 </Layout>
