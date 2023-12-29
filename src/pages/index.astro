@@ -10,6 +10,7 @@ import SectionContainer from "../components/SectionContainer.astro";
 import StudieIcon from "../components/icons/StudieIcon.astro";
 import ProjectIcon from "../components/icons/ProjectIcon.astro";
 import Projects from "../components/Projects.astro";
+import CVIcon from "../components/icons/CV.astro";
 ---
 
 <Layout
@@ -54,6 +55,10 @@ import Projects from "../components/Projects.astro";
 				<SocialPill href="mailto:enriquejulio071@gmail.com">
 					<MailIcon class="size-4 md:size-6" />
 					 enriquejulio071
+				</SocialPill>
+				<SocialPill href="./public/cv/cv3.pdf" download="Mi_CV.pdf">
+					<CVIcon class="size-4 md:size-6" />
+					 Curriculum
 				</SocialPill>
 			</nav>
 		</SectionContainer>
