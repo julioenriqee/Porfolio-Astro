@@ -11,6 +11,8 @@ import StudieIcon from "../components/icons/StudieIcon.astro";
 import ProjectIcon from "../components/icons/ProjectIcon.astro";
 import Projects from "../components/Projects.astro";
 import CVIcon from "../components/icons/CV.astro";
+import Aboutme from "../components/aboutme.astro";
+import Contact from "../components/contact.astro";
 ---
 
 <Layout
@@ -21,7 +23,7 @@ import CVIcon from "../components/icons/CV.astro";
 		<SectionContainer class="py-32 pb-16">
 			<img
 				class="rounded-full size-16 hover:scale-125 mb-4"
-				src="https://avatars.githubusercontent.com/u/124218570?v=4"
+				src="/projects/foto.webp"
 				alt="mifoto"
 			/>
 			<h1
@@ -57,7 +59,7 @@ import CVIcon from "../components/icons/CV.astro";
 					 enriquejulio071
 				</SocialPill>
 				<SocialPill
-					href="https://drive.google.com/file/d/154emnSfvKwDKAxErxhwjgsDjKsyy1o_r/view?usp=drive_link"
+					href="https://drive.google.com/file/d/1kxeJq9ZA4D3Ve5QBotWpm-W1ZFvaNCQi/view?usp=drive_link"
 				>
 					<CVIcon class="size-4 md:size-6" />
 					 Curriculum
@@ -79,4 +81,17 @@ import CVIcon from "../components/icons/CV.astro";
 			<Projects />
 		</SectionContainer>
 	</main>
+	<SectionContainer id="Sobre mi">
+		<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+			Sobre mi
+		</h2>
+		<Aboutme />
+	</SectionContainer>
+
+	<SectionContainer id="Contacto">
+		<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 text-center">
+			Contacto
+		</h2>
+		<Contact />
+	</SectionContainer>
 </Layout>
