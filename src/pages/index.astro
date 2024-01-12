@@ -13,6 +13,7 @@ import Projects from "../components/Projects.astro";
 import CVIcon from "../components/icons/CV.astro";
 import Aboutme from "../components/aboutme.astro";
 import Contact from "../components/contact.astro";
+import Skills from "../components/skills.astro";
 ---
 
 <Layout
@@ -23,7 +24,7 @@ import Contact from "../components/contact.astro";
 		<SectionContainer class="py-32 pb-16">
 			<img
 				class="rounded-full size-16 hover:scale-125 mb-4"
-				src="../../public/projects/foto3.jpeg"
+				src="../../public/projects/foto3.webp"
 				alt="mifoto"
 			/>
 			<h1
@@ -80,6 +81,14 @@ import Contact from "../components/contact.astro";
 			</h2>
 			<Projects />
 		</SectionContainer>
+
+		<SectionContainer id="Skills">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 text-center">
+				Skills
+			</h2>
+			<Skills />
+		</SectionContainer>
+
 		<SectionContainer id="Sobre mi">
 			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 				Sobre mi

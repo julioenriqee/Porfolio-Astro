@@ -1,9 +1,14 @@
-<astro:fragment>
-    <ul>
-        <li>JavaScript</li>
-        <li>Python</li>
-        <li>React</li>
-        <li>Node.js</li>
-        <!-- Agrega más habilidades aquí -->
-    </ul>
-</astro:fragment>
+---
+import HTML from "./skills/HTML.astro"
+import CSS from "./skills/CSS.astro"
+import JS from "./skills/JavaScript.astro"
+import React from "./skills/React.astro"
+import Astrox from "./skills/Astrox.astro"
+---
+<section class="flex justify-between">
+    <HTML />
+    <CSS />
+    <JS />
+    <React />
+    <Astrox />
+</section>
