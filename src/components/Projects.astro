@@ -1,5 +1,7 @@
 ---
+import Linkbutton from "./Linkbutton.astro";
 import AstroIcon from "./icons/AstroIcon.astro";
+import GitHub from "./icons/GitHub.astro";
 import TailwindIcon from "./icons/Tailwind.astro";
 const TAGS = {
   ASTRO: {
@@ -18,8 +20,8 @@ const PROJECTS = [
     title: "Comming Soon",
     description:
       "Estoy haciendo proyectos que todavia no los terminé, en cuanto esten listo los pondre en esta seccion",
-    link: "#",
-    github: "#",
+    link: "https://porfolioje.netlify.app/",
+    github: "https://github.com/julioenriqee/Porfolio-Astro",
     image: "/projects/1.webp",
     tags: [TAGS.ASTRO, TAGS.TAILWIND],
   },
@@ -27,7 +29,7 @@ const PROJECTS = [
 ---
 
 {
-  PROJECTS.map(({ title, description, tags, image }) => (
+  PROJECTS.map(({ title, description, tags, image, link, github }) => (
     <article>
       <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
       <p class="text-lg mb-4 text-pretty">{description}</p>
@@ -35,7 +37,7 @@ const PROJECTS = [
         {tags.map((tag) => (
           <li>
             <span
-              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 border border-white/10`}
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
             >
               <tag.icon class="size-4" />
               {tag.name}
@@ -48,6 +50,17 @@ const PROJECTS = [
         src={image}
         alt={`captura de pantalla del proyecto ${image}`}
       />
+      <footer class="flex gap-x-4 items-end justify-star mt-4">
+        <Linkbutton href={github}>
+          <GitHub class="size-6"/>
+          Ver en GitHub
+        </Linkbutton>
+        
+        <Linkbutton href={link}>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg>
+          Ir al sitio web
+        </Linkbutton>
+      </footer>
     </article>
   ))
 }
