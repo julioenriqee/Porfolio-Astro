@@ -1,0 +1,34 @@
+---
+import Badge from "../components/Badge.astro"
+import SectionContainer from "../components/SectionContainer.astro"
+import SocialPill from "../components/SocialPill.astro"
+import Layout from "../layouts/Layout.astro"
+import LinkedInIcon from "../components/icons/LinkedIn.astro"
+---
+<h1>Badge</h1>
+<Layout
+    title="Desing System Porfolio"
+    description="El catálogo de componentes de nuestro porfolio"    
+>
+    <SectionContainer class="py-44 pb-32 flex flex-col gap-y-10">
+        <article class="mb-10">
+            <h1 class="mb-4 text-xl font-semibold">&lt;Badge /&gt;</h1>
+
+            <Badge>Disponible</Badge>
+            
+        </article>
+        
+        <article class="mb-10">
+            <h1 class="mb-4 text-xl font-semibold">&lt;SocialPill</h1>
+
+            <div class="flex">
+            <SocialPill href="http://linkedin.com/in/julio-enrique-54234a223">
+                <LinkedInIcon class="size-4 md:size-6" />
+                 LinkedIn
+            </SocialPill>
+            </div>
+        </article>
+
+    </SectionContainer>
+
+</Layout>

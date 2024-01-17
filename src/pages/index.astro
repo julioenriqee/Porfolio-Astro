@@ -14,6 +14,8 @@ import CVIcon from "../components/icons/CV.astro";
 import Aboutme from "../components/aboutme.astro";
 import Contact from "../components/contact.astro";
 import Skills from "../components/skills.astro";
+import AboutmeIcon from "../components/icons/aboutme.astro";
+import AstroIcon from "../components/icons/AstroIcon.astro";
 ---
 
 <Layout
@@ -90,7 +92,10 @@ import Skills from "../components/skills.astro";
 		</SectionContainer>
 
 		<SectionContainer id="Sobre mi">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+			<h2 
+				class="text-3xl font-semibold mb-6 flex gap-x-3 items-center"
+			>
+				<AboutmeIcon class="size-8" />
 				Sobre mi
 			</h2>
 			<Aboutme />
