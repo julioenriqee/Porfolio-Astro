@@ -4,11 +4,75 @@ import CSS from "./skills/CSS.astro"
 import JS from "./skills/JavaScript.astro"
 import React from "./skills/React.astro"
 import Astrox from "./skills/Astrox.astro"
+import Python from "./skills/Python.astro"
+import Angular from "./skills/Angular.astro"
+import SQL from "./skills/SQL.astro"
+import Next from "./skills/Nextjs.astro"
+import Tailwind from "./skills/Tailwind.astro"
+import Bootstrap from "./skills/Bootstrap.astro"
+import Svelte from "./skills/Svelte.astro"
+import SkillPill from "./SkillPill.astro"
 ---
-<section class="flex justify-between">
-    <HTML />
-    <CSS />
-    <JS />
-    <React />
-    <Astrox />
-</section>
+<div class="grid grid-cols-1 gap-4">
+    <nav class="flex justify-center gap-x-3">
+        <SkillPill >
+            <HTML />
+            <h1>HTML</h1>
+        </SkillPill>
+        <SkillPill>
+            <CSS />
+            <h1>CSS</h1>
+        </SkillPill>
+        <SkillPill>
+            <JS />
+            <h1>JavaScript</h1>
+        </SkillPill>
+        <SkillPill>
+            <Python />
+            <h1>Python</h1>
+        </SkillPill>
+    </nav>
+    <nav class="flex justify-center gap-x-3">
+        <SkillPill>
+            <SQL />
+            <h1>SQL</h1>
+        </SkillPill>
+        
+        <SkillPill>
+            <Angular />
+            <h1>Angular</h1>
+        </SkillPill>
+
+        <SkillPill>
+            <React />
+            <h1>React</h1>
+        </SkillPill>
+
+        <SkillPill>
+            <Astrox />
+            <h1>Astro</h1>
+        </SkillPill>
+
+        <SkillPill>
+            <Next />
+            <h1>Next.js</h1>
+        </SkillPill>
+        
+        
+    </nav>
+    <nav class="flex justify-center gap-x-3">
+        <SkillPill>
+            <Tailwind />
+            <h1>Tailwind</h1>
+        </SkillPill>
+        <SkillPill>
+            <Bootstrap />
+            <h1>Bootstrap</h1>
+        </SkillPill>
+        <SkillPill>
+            <Svelte />
+            <h1>Svelte</h1>
+        </SkillPill>
+    </nav>
+</div>
+
