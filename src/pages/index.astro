@@ -16,8 +16,11 @@ import Contact from "../components/contact.astro";
 import Skills from "../components/skills.astro";
 import AboutmeIcon from "../components/icons/aboutme.astro";
 import Profilepicture from "../components/profilepicture.astro";
+import '../styles.css';
 ---
-
+<head>
+	<link rel="stylesheet" href="./styles.css">
+  </head>
 <Layout
 	title="Porfolio de Julio Enrique - Programador"
 	description="Contrata a Julio para tener en el equipo a un programador con todas las ganas de aprender y esforzarse cada dia en mejorar"
@@ -25,7 +28,7 @@ import Profilepicture from "../components/profilepicture.astro";
 	<main class="px-7">
 		<SectionContainer id="top" class="py-16 pb-16 flex flex-col items-center">
 			<img 
-			class="rounded-full w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 object-cover shadow-2xl"
+			class="h-[16rem] bg-cover bg-[center_center] bg-no-repeat border-[3px] animate-[morph_8s_ease-in-out_infinite] rounded-[60%_40%_30%_70%_/_60%_30%_70%_40%] relative [transition:all_1s_ease-in-out] "
 			src="https://avatars.githubusercontent.com/u/124218570?v=4" alt="">
 			<!-- <Profilepicture /> -->
 			<h1
