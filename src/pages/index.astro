@@ -15,6 +15,7 @@ import Aboutme from "../components/aboutme.astro";
 import Contact from "../components/contact.astro";
 import Skills from "../components/skills.astro";
 import AboutmeIcon from "../components/icons/aboutme.astro";
+import Profilepicture from "../components/profilepicture.astro";
 ---
 
 <Layout
@@ -23,13 +24,9 @@ import AboutmeIcon from "../components/icons/aboutme.astro";
 >
 	<main class="px-7">
 		<SectionContainer id="top" class="py-16 pb-16 flex flex-col items-center">
-			<img
-				class="rounded-full size-64 hover:scale-105 mb-4"
-				src="https://avatars.githubusercontent.com/u/124218570?v=4"
-				alt="mifoto"
-			/>
+			<Profilepicture />
 			<h1
-				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 py-7 pb-6 lg:pb-10"
 			>
 				Hola soy Julio <a
 					href="http://linkedin.com/in/julio-enrique-54234a223"
