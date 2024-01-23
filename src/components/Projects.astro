@@ -3,6 +3,12 @@ import Linkbutton from "./Linkbutton.astro";
 import AstroIcon from "./icons/AstroIcon.astro";
 import GitHub from "./icons/GitHub.astro";
 import TailwindIcon from "./icons/Tailwind.astro";
+import ReactIcon from "./icons/React.astro";
+import JavaScriptIcon from "./icons/JS.astro";
+import HTMLIcon from "./icons/HTML.astro";
+import CSSIcon from "./icons/CSS.astro";
+
+
 const TAGS = {
   ASTRO: {
     name: "Astro",
@@ -14,16 +20,45 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: TailwindIcon,
   },
+  REACT: {
+    name: "React JS",
+    class: "bg-black text-white border border-gray-900",
+    icon: ReactIcon,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-black text-white border border-gray-900",
+    icon: JavaScriptIcon,
+  },
+  HTML: {
+    name: "HTML",
+    class: "bg-black text-white border border-gray-900",
+    icon: HTMLIcon,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-black text-white border border-gray-900",
+    icon: CSSIcon,
+  },
 };
 const PROJECTS = [
   {
-    title: "Comming Soon",
+    title: "E-commerce",
     description:
-      "Estoy haciendo proyectos que todavia no los terminé, en cuanto esten listo los pondre en esta seccion",
-    link: "https://porfolioje.netlify.app/",
-    github: "https://github.com/julioenriqee/Porfolio-Astro",
-    image: "/projects/1.webp",
-    tags: [TAGS.ASTRO, TAGS.TAILWIND],
+      "Realicé un e-commerce con React CSS estático y básico. Estoy trabajando y aprendiendo para hacerlo dinámico con carrito de compras, además de agregarle métodos de pago.",
+    link: "https://jotashop.vercel.app/",
+    github: "https://github.com/julioenriqee/e-commerce-basico",
+    image: "/projects/e-commerce.webp",
+    tags: [TAGS.REACT, TAGS.TAILWIND],
+  },
+  {
+    title: "Simulador de terminal",
+    description:
+      " Simulador de terminal con JavaScript, HTML y CSS. El objetivo de este proyecto fue aprender a manipular el DOM con JavaScript.",
+    link: "https://jotaterminal.vercel.app/",
+    github: "https://github.com/julioenriqee/terminal-web",
+    image: "/projects/terminal.webp",
+    tags: [TAGS.JAVASCRIPT, TAGS.HTML, TAGS.CSS],
   },
 ];
 ---
