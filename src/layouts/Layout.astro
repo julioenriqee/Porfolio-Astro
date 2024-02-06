@@ -26,39 +26,39 @@ const { description, title } = Astro.props;
 			class="absolute top-0 z-[-2] h-full w-full bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
 		>
 		</div> -->
-		<div class="absolute inset-0 -z-10 h-full w-auto items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
+		<div class="absolute inset-0 -z-10 h-full w-auto items-center px-5 py-24bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)] dark:[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
 		</div>
 		<Header />
 		<slot />
 		<Footer />
+		<style is:global>
+			:root {
+				color-scheme: light dark;
+			}
+			html {
+				font-family: "Onest Variable", system-ui, sans-serif;
+				scroll-behavior: smooth;
+			}
+			body {
+				background-color: #070707;
+				display: flex;
+				flex-direction: column;
+				min-height: 100vh;
+			}
+		
+			@media (prefers-reduced-motion: reduce) {
+				html {
+					scroll-behavior: auto;
+				}
+			}
+			/* tuve problemas con estas dimenciones de pantalla y por el momento solo quedo arreglarlo manualmente no se podria ser de la manera correcta */
+			@media (min-width: 360px) and (max-width: 600px) {
+				body {
+					width: 600px;
+					margin: 0 auto;
+				}
+			}
+		</style>
 	</body>
 </html>
 
-<style is:global>
-	:root {
-		color-scheme: light dark;
-	}
-	html {
-		font-family: "Onest Variable", system-ui, sans-serif;
-		scroll-behavior: smooth;
-	}
-	body {
-		background-color: #070707;
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
-
-	@media (prefers-reduced-motion: reduce) {
-		html {
-			scroll-behavior: auto;
-		}
-	}
-	/* tuve problemas con estas dimenciones de pantalla y por el momento solo quedo arreglarlo manualmente no se podria ser de la manera correcta */
-	@media (min-width: 360px) and (max-width: 600px) {
-		body {
-			width: 600px;
-			margin: 0 auto;
-		}
-	}
-</style>

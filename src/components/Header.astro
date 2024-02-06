@@ -1,49 +1,8 @@
-<header
-  class={`
-    flex justify-center items-center
-    mx-auto
-    py-5
-    sticky top-0
-    xl:w-[1120px]
-    z-10
-  `}
->
-  <nav
-    class={`
-      rounded-full
-      px-3 py-1
-      flex flex-row items-center
-      backdrop-blur-2xl
-      gap-x-10 opacity-80
-      `}
-  >
-    <a
-      class="hover:scale-110 hover:bg-white/10 rounded-full px-3 transition"
-      href="/#top"
-      >Inicio
-    </a>
-    <a
-      class="hover:scale-110 hover:bg-white/10 rounded-full px-3 transition"
-      href="/#Estudios"
-      >Estudios
-    </a>
-    <a
-      class="hover:scale-110 hover:bg-white/10 rounded-full px-3 transition"
-      href="/#Proyectos"
-      >Proyectos
-    </a>
-    <a
-      class="hover:scale-110 hover:bg-white/10 rounded-full px-3 transition"
-      href="/#Sobre-mi"
-      >Sobre mi
-    </a>
-    <a
-      class="hover:scale-110 hover:bg-white/10 rounded-full px-3 transition"
-      href="/#Contacto"
-      >Contacto
-    </a>
-  </nav>
-</header>
+---
+import ThemeToggle from './ThemeToggle.astro'
+---
+
+
 
 <script>
   const $navAElements: Element[] = [...document.querySelectorAll('header nav a')]
@@ -61,3 +20,66 @@
     })
   })
 </script>
+
+<header
+  class={`
+    flex justify-center items-center gap-x-3
+    mx-auto
+    py-5
+    sticky top-0
+    xl:w-[1120px]
+    z-10
+  `}
+>
+  <nav
+    class={`
+      rounded-full
+      px-3 py-1
+      flex flex-row items-center
+      backdrop-blur-2xl
+      gap-x-10 opacity-80
+      text-black dark:text-gray-200
+      `}
+  >
+    <!-- <a
+      class="hover:scale-110 hover:bg-black/10 dark:hover:bg-white/10 rounded-full px-3 transition"
+      href="/#top"
+      >Inicio
+    </a> -->
+    <a
+      class="hover:scale-110 hover:bg-black/10 dark:hover:bg-white/10 rounded-full px-3 transition"
+      href="/#Estudios"
+      >Estudios
+    </a>
+    <a
+      class="hover:scale-110 hover:bg-black/10 dark:hover:bg-white/10 rounded-full px-3 transition"
+      href="/#Proyectos"
+      >Proyectos
+    </a>
+    <a
+      class="hover:scale-110 hover:bg-black/10 dark:hover:bg-white/10 rounded-full px-3 transition"
+      href="/#Sobre-mi"
+      >Sobre mi
+    </a>
+    <a
+      class="hover:scale-110 hover:bg-black/10 dark:hover:bg-white/10 rounded-full px-3 transition"
+      href="/#Contacto"
+      >Contacto
+    </a>
+    <ThemeToggle />
+  </nav>
+  
+</header>
+<style>
+  nav {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  @keyframes nav-shadown {
+    to {
+      @apply shadow-lg ring-1 backdrop-blur  dark:bg-gray-800/60 ring-white/10;
+    }
+  }
+</style>

@@ -16,6 +16,7 @@ import Contact from "../components/contact.astro";
 import Skills from "../components/skills.astro";
 import AboutmeIcon from "../components/icons/aboutme.astro";
 import '../styles.css';
+import ContactIcon from "../components/icons/ContactIcon.astro";
 ---
 <head>
 	<link rel="stylesheet" href="./styles.css">
@@ -27,10 +28,10 @@ import '../styles.css';
 	<main class="px-7">
 		<SectionContainer id="top" class="py-10 pb-16 flex flex-col items-center">
 			<img 
-			class="h-[16rem] bg-cover bg-[center_center] bg-no-repeat border-[3px] animate-[morph_8s_ease-in-out_infinite] rounded-[60%_40%_30%_70%_/_60%_30%_70%_40%] relative [transition:all_1s_ease-in-out] "
+			class="h-[16rem] bg-cover bg-[center_center] bg-no-repeat border-[4px] animate-[morph_8s_ease-in-out_infinite] rounded-[60%_40%_30%_70%_/_60%_30%_70%_40%] relative [transition:all_1s_ease-in-out] border-black dark:border-white"
 			src="https://avatars.githubusercontent.com/u/124218570?v=4" alt="">
 			<h1
-				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 py-7 pb-6 lg:pb-10"
+				class="text-black dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 py-7 pb-6 lg:pb-10"
 			>
 				Hola soy Julio <a
 					href="http://linkedin.com/in/julio-enrique-54234a223"
@@ -41,11 +42,11 @@ import '../styles.css';
 					<!-- <Badge>Disponible</Badge> -->
 				</a>
 			</h1>
-			<h2 class="text-xl lg:text-2xl opacity-80 text-warp max-w-[700px]">
-				<span class="text-yellow-200/90"
+			<h2 class="text-xl lg:text-2xl opacity-80 text-warp max-w-[700px] text-black dark:text-white">
+				<span class="text-yellow-500 dark:text-yellow-300/90"
 					>Estudiante de Ingenieria En Sistemas De Información</span
 				>. Dispuesto para empezar mi primera experiencia laboral. <span
-					class="text-blue-300/90">De La Plata, Argentina.</span
+					class="text-blue-700 dark:text-blue-300/90">De La Plata, Argentina.</span
 				>
 			</h2>
 			<nav class="flex gap-4 mt-8 flex-wrap">
@@ -70,32 +71,32 @@ import '../styles.css';
 			</nav>
 		</SectionContainer>
 		<SectionContainer id="Estudios">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black dark:text-white">
 				<StudieIcon class="size-4 md:size-6" />
 				 Estudios
 			</h2>
 			<Studies />
 		</SectionContainer>
 		<SectionContainer id="Proyectos">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black dark:text-white">
 				<ProjectIcon class="size-4 md:size-6 gap-4" />
 				 Proyectos
 			</h2>
 			<Projects />
 		</SectionContainer>
 
-		<SectionContainer id="Skills">
+		<!-- <SectionContainer id="Skills">
 			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 text-center">
 				Skills
 			</h2>
 			<Skills class="size-7">
 
 			</Skills>
-		</SectionContainer>
+		</SectionContainer> -->
 
 		<SectionContainer id="Sobre-mi">
 			<h2 
-				class="text-3xl font-semibold mb-6 flex gap-x-3 items-center"
+				class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black dark:text-white"
 			>
 				<AboutmeIcon class="size-8" />
 				Sobre mi
@@ -104,7 +105,10 @@ import '../styles.css';
 		</SectionContainer>
 
 		<SectionContainer id="Contacto" >
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 text-center">
+			<h2 
+				class="items-center text-3xl font-semibold mb-6 flex gap-x-3 text-center text-black dark:text-white"
+			>
+				<ContactIcon class="size-7" />
 				Contacto
 			</h2>
 			<Contact />
